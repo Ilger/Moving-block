@@ -7,6 +7,11 @@ let context = canvas.getContext('2d');
 canvas.width = 512;
 canvas.height = 480;
 
-// log to check everything is good
-console.log(canvas.height);
-console.log(canvas.width);
+// background image
+let bgReady = false;
+let bgImage = new Image();
+bgImage.onload = function () {
+  bgReady = true;
+  console.log('loaded');
+  bgImage.src = './assets/img/backgroundblockgame.png';
+};
